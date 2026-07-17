@@ -24,3 +24,104 @@
     }
     System.out.println(sum);
 ```
+2.1 โปรแกรมนี้วนซ้ำทั้งหมดกี่รอบ
+- ตอบ: 5 รอบ
+
+2.2 ค่าของตัวแปร sum หลังจบการทำงานคือเท่าใด
+- ตอบ: 15
+
+2.3 ผลลัพธ์ที่แสดงออกหน้าจอคืออะไร
+- ตอบ: 15
+
+2.4 โปรแกรมนี้ทำหน้าที่อะไร
+- ตอบ: คำนวณผลรวมของตัวเลขตั้งแต่ 1 ถึง 5 แล้วแสดงผล
+
+## ตอนที่ 3: เขียนโปรแกรมตรวจสอบเลขคู่หรือเลขคี่
+
+**Pseudocode**
+```text
+START
+    DISPLAY "Enter number: "
+    INPUT number
+    
+    IF number MOD 2 == 0 THEN
+        DISPLAY "Even number"
+    ELSE
+        DISPLAY "Odd number"
+    ENDIF
+END
+```
+
+**Java Code**
+```text
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int number = sc.nextInt();
+
+        if (number % 2 == 0) {
+            System.out.println("Even number");
+        } else {
+            System.out.println("Odd number");
+        }
+
+        sc.close();
+    }
+}
+```
+## ตอนที่ 4: เขียนโปรแกรมคำนวณคะแนนรวมและตัดสินผลผ่าน/ไม่ผ่าน
+**Pseudocode**
+```text
+START
+    DISPLAY "Enter midterm score: "
+    INPUT midterm_score
+    
+    DISPLAY "Enter final score: "
+    INPUT final_score
+    
+    total_score = midterm_score + final_score
+    DISPLAY "Total score = ", total_score
+    
+    IF total_score >= 50 THEN
+        DISPLAY "Pass"
+    ELSE
+        DISPLAY "Fail"
+    ENDIF
+END
+```
+**Java Code**
+```text
+import java.util.Scanner;
+
+public class Score {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter midterm score: ");
+        int mid = sc.nextInt();
+
+        System.out.print("Enter final score: ");
+        int fin = sc.nextInt();
+
+        int total = mid + fin;
+
+        System.out.println("Total score = " + total);
+
+        if (total >= 50) {
+            System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
+
+        sc.close();
+    }
+}
+```
+
+
+
